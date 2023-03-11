@@ -1,0 +1,39 @@
+VS Code C++ setup in MAC:
+
+1. Install Homebrew
+Command: 
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+You will find 2 commands in the next steps on the terminal after the command executes. Execute them.
+Incase of the following error
+curl: (35) error:02FFF036:system library:func(4095):Connection reset by peer
+Change the wifi from the institute wifi and try again
+
+2. Installing the compiler 
+CLANG: command xcode-select --install
+GCC: brew install gcc
+
+3. Extensions on Vs Code to install
+C++, coderunner
+
+4. How to make <bits/stdc++.h> work?
+Cmd + shift + H -> click on Macintosh HD 
+	In the finder -> Go -> Go to folder -> usr/local/include
+[if you don’t have a include folder in local, create one]
+Create a bits folder in it
+Create a stdc++.h file in it 
+https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/precompiled/stdc%2B%2B.h (copy this into the stdc++.h file and you’re done)
+
+5. Taking user input and output
+Create input.txt, output.txt files. Now the contents of your main function should be changed to what’s below.
+int main() {
+   #ifndef ONLINE_JUDGE
+   freopen("input.txt", "r", stdin);
+   freopen("output.txt", "w", stdout);
+   #endif
+}
+	
+6. Control + option + N - to run
+7. Control + option + M - to stop the current build/run
+
+8. https://docs.google.com/document/d/1s38n3Ykrxa7KB62wKsQbl1I_qtXkpvzcs-hqsFejvr8/edit#
+[added all these steps to doc for better view]
